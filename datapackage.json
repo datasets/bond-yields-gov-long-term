@@ -1,0 +1,47 @@
+{
+  "title": "Long Term Government Bond Yields (10y, 20y, 30y)",
+  "license": {
+    "id": "odc-pddl",
+    "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+  },
+  "datasets": [
+    {
+      "title": "US Treasury 10 year Yields over time",
+      "path": "data/us-10y.csv",
+      "fields": [
+        {
+          "id": "Date",
+          "type": "date",
+          "format": "yyyy-mm"
+        },
+        {
+          "id": "Yield",
+          "type": "number",
+          "units": "percent"
+        }
+      ]
+    },
+    {
+      "title": "Japan 10-year Government Benchmark bond yield - Yield, average of observations through period",
+      "source": {
+        "label": "ECB, but original source stated as Reuters",
+        "url": "http://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=143.FM.M.JP.JPY.RT.BB.JP10YT_RR.YLDA"
+      },
+      "path": "data/jp-government-10y.csv",
+      "type": "timeseries",
+      "frequency": "monthly",
+      "fields": [
+        {
+          "id": "Date",
+          "type": "date"
+        },
+        {
+          "id": "Yield",
+          "type": "number",
+          "units": "percent",
+          "notes": "Average of observations through period (A)"
+        }
+      ]
+    }
+  ]
+}
