@@ -1,47 +1,42 @@
 {
-  "title": "Long Term Government Bond Yields (10y, 20y, 30y)",
-  "license": {
-    "id": "odc-pddl",
-    "url": "http://opendatacommons.org/licenses/pddl/1.0/"
-  },
-  "datasets": [
+  "description": "Long-term government bond yields (10-year) over time. Data is sourced from various financial institutions and presented in a normalized format.",
+  "keywords": [
+    "Government Bonds",
+    "10-year Yield",
+    "US Treasury",
+    "Interest Rates",
+    "Time Series"
+  ],
+  "last_updated": "2025-02-28",
+  "licenses": [
     {
-      "title": "US Treasury 10 year Yields over time",
-      "path": "data/us-10y.csv",
-      "fields": [
-        {
-          "id": "Date",
-          "type": "date",
-          "format": "yyyy-mm"
-        },
-        {
-          "id": "Yield",
-          "type": "number",
-          "units": "percent"
-        }
-      ]
-    },
-    {
-      "title": "Japan 10-year Government Benchmark bond yield - Yield, average of observations through period",
-      "source": {
-        "label": "ECB, but original source stated as Reuters",
-        "url": "http://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=143.FM.M.JP.JPY.RT.BB.JP10YT_RR.YLDA"
-      },
-      "path": "data/jp-government-10y.csv",
-      "type": "timeseries",
-      "frequency": "monthly",
-      "fields": [
-        {
-          "id": "Date",
-          "type": "date"
-        },
-        {
-          "id": "Yield",
-          "type": "number",
-          "units": "percent",
-          "notes": "Average of observations through period (A)"
-        }
-      ]
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/1.0/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
-  ]
+  ],
+  "name": "long-term-bond-yields",
+  "resources": [
+    {
+      "name": "us-treasury-10y-yields",
+      "path": "data/us-10y.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "yyyy-mm"
+          },
+          {
+            "name": "Yield",
+            "type": "number",
+            "units": "percent"
+          }
+        ]
+      }
+    }
+  ],
+  "title": "Long Term Government Bond Yields (10y)",
+  "version": "2025",
+  "collection": "financial-data"
 }
