@@ -13,18 +13,16 @@ Long term government bond yields.
 [ecb]: http://www.ecb.int/stats/money/long/html/index.en.html
 [eurostat]: http://epp.eurostat.ec.europa.eu/tgm/table.do?tab=table&plugin=1&language=en&pcode=teimf050
 
-## US
+## Preparation
+Process is recorded and automated in python script:
 
-[Release H.15 from the Federal Reserve - Selected Interest Rates Daily][fed] specifically the [10 year US Treasury (monthly, csv)][fed-csv].
+```bash
+pip install -r scripts/requirements.txt
+python  scripts/prepare.py
+```
 
-[fed]: http://www.federalreserve.gov/releases/h15/data.htm
-[fed-csv]: http://www.federalreserve.gov/datadownload/Output.aspx?rel=H15&series=0809abf197c17f1ff0b2180fe7015cc3&lastObs=&from=&to=&filetype=csv&label=include&layout=seriescolumn
-
-## Japan
-
-[Japan 10-year Government Benchmark bond yield - Yield, average of observations through period - from ECB][ecb-jp-10]
-
-[ecb-jp-10]: http://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=143.FM.M.JP.JPY.RT.BB.JP10YT_RR.YLDA
+## Automation
+Up-to-date (auto-updates every month) bond-yields-gov-long-term dataset could be found on the datahub.io: https://datahub.io/core/bond-yields-gov-long-term
 
 # License
 
