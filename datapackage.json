@@ -1,5 +1,7 @@
 {
-  "description": "Long-term government bond yields (10-year) over time. Data is sourced from various financial institutions and presented in a normalized format.",
+  "name": "long-term-bond-yields",
+  "title": "Long Term Government Bond Yields (10y)",
+  "description": "Monthly average US 10-year Treasury constant maturity yield (FRED series DGS10), sourced from the Federal Reserve Bank of St. Louis. Values are expressed as a percentage. Coverage starts April 1953.",
   "keywords": [
     "Government Bonds",
     "10-year Yield",
@@ -7,36 +9,43 @@
     "Interest Rates",
     "Time Series"
   ],
-  "last_updated": "2025-02-28",
   "licenses": [
     {
       "name": "ODC-PDDL-1.0",
-      "path": "http://opendatacommons.org/licenses/pddl/1.0/",
+      "path": "https://opendatacommons.org/licenses/pddl/",
       "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
-  "name": "long-term-bond-yields",
+  "sources": [
+    {
+      "name": "Federal Reserve Bank of St. Louis (FRED)",
+      "path": "https://fred.stlouisfed.org/series/DGS10",
+      "title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity (DGS10)"
+    }
+  ],
+  "version": "2025",
+  "collection": "financial-data",
   "resources": [
     {
       "name": "us-treasury-10y-yields",
       "path": "data/us-10y.csv",
+      "description": "Monthly average US 10-year Treasury constant maturity yield from April 1953 onwards. Each row is one calendar month; the Yield value is the mean of all daily observations published by FRED for that month, rounded to two decimal places.",
       "schema": {
         "fields": [
           {
             "name": "Date",
             "type": "date",
-            "format": "yyyy-mm"
+            "format": "%Y-%m",
+            "description": "Month of the observation in YYYY-MM format (e.g. 2025-02)."
           },
           {
             "name": "Yield",
             "type": "number",
+            "description": "Monthly average 10-year US Treasury constant maturity yield, expressed as a percentage (e.g. 4.26 means 4.26%).",
             "units": "percent"
           }
         ]
       }
     }
-  ],
-  "title": "Long Term Government Bond Yields (10y)",
-  "version": "2025",
-  "collection": "financial-data"
+  ]
 }
